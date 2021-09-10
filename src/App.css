@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
+
+.app {
+	text-align: center;
+	position: relative;
+	top: 8rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+	background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+	color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title {
+	font-family: 'Monofett', cursive;
+	font-size: 88px;
+	color: white;
+	margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.inputForm {
+	width: 300px;
+	outline: none;
+	padding: 1rem;
+	background-color: transparent;
+	border: 1px solid white;
+	border-radius: 10px;
+	color: white;
+	font-size: 18px;
+	transition: ease-out 0.2s;
+}
+.inputForm:focus {
+	background-color: white;
+	color: gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputForm:hover {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+		rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+::placeholder {
+	color: white;
+}
+
+.inputForm:focus::-webkit-input-placeholder {
+	color: gray;
+}
+
+.button {
+	padding: 1rem;
+	font-size: 18px;
+	padding: 1rem;
+	border: 1px solid rgb(85, 85, 85);
+	border-radius: 10px;
+	margin-left: 10px;
+	background-color: rgb(255, 102, 0);
+	color: white;
+}
+
+.button:hover {
+	background-color: rgb(235, 96, 4);
 }
