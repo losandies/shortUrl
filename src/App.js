@@ -14,6 +14,10 @@ const App = () => {
 
 	const API_KEY = process.env.REACT_APP_API_KEY;
 
+	if (!userInput.includes('https://')) {
+		setUserInput(`https://${userInput}`);
+	}
+
 	const shortenUrl = async () => {
 		const response = await fetch('https://api-ssl.bitly.com/v4/shorten', {
 			method: 'POST',
@@ -33,6 +37,8 @@ const App = () => {
 		setTimeout(() => {
 			setShortUrl('');
 		}, 100);
+
+		alert('Copied!');
 	};
 
 	return (
